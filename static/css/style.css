@@ -1,0 +1,254 @@
+/* static/css/style.css */
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.login-section {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-section form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.login-section form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.login-section form input[type="text"],
+.login-section form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.login-section form button {
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-section form button:hover {
+    background-color: #0066FF;
+}
+
+.error {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    header h1 {
+        text-align: center;
+    }
+    
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    nav ul {
+        display: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input[type="checkbox"]:checked ~ nav ul {
+        display: block;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    .login-section {
+        max-width: none;
+    }
+}
+
+
+.card {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Adjust the width as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card form {
+    margin-top: 20px;
+}
+
+.card form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.card form input[type="text"],
+.card form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.card form button {
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card form button:hover {
+    background-color: #0066FF;
+}
+
+.error {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* static/css/style.css */
+
+/* Existing styles... */
+
+.controller-section {
+    max-width: 300px; /* Adjust the max-width as needed */
+    width: 90%; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: center; /* Center the content */
+}
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1E90FF;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+#toggle-status {
+    color: #fff;
+    margin-top: 10px;
+}

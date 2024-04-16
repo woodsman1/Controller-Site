@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!-- controller.html -->
+
+{% block title %}Controller - Django Redis Website{% endblock %}
+
+{% block content %}
+<div class="card">
+    <section class="controller-section">
+        <h2>Controller</h2>
+        <br><br>
+        <label class="switch">
+            {% comment %} <input type="checkbox" id="toggle-switch"> {% endcomment %}
+            <input type="checkbox" id="toggle-switch" {% if toggle_flag %}checked{% endif %}>
+
+            <span class="slider"></span>
+        </label>
+        <p id="toggle-status">{{toggle_state}}</p>
+    </section>
+</div>
+<script src="{% static 'js/toggle.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!-- login.html -->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Login - Django Redis Website{% endblock %}
+
+{% block content %}
+<section class="login-section">
+    <div class="card">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit">Login</button>
+        </form>
+        {% if error_message %}
+            <p class="error">{{ error_message }}</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
