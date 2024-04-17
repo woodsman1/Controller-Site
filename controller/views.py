@@ -30,7 +30,7 @@ def user_login(request):
 def controller_main(request):
     redis_client = redis.StrictRedis(host=settings.REDIS_HOST, port=settings.REDIS_PORT, password=settings.REDIS_PASSWORD)
 
-    toggle_status = int(redis_client.get('SWITCH'))
+    toggle_status = int(redis_client.get('TAKE_ORDER'))
     check_status = True if toggle_status else False
 
     toggle_state = 'On' if toggle_status else 'Off'
@@ -45,7 +45,7 @@ def toggle(request):
         status = json.loads(request.body.decode('utf-8'))["status"]
         try:
             redis_client = redis.StrictRedis(host=settings.REDIS_HOST, port=settings.REDIS_PORT, password=settings.REDIS_PASSWORD)
-            redis_client.set('SWITCH', '1' if status else '0')
+            redis_client.set('TAKE_ORDER', '1' if status else '0')
             return JsonResponse({'status': 'success'})
         except Exception as e:
             return JsonResponse({'status': 'error', 'message': str(e)})
