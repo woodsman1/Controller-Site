@@ -3,7 +3,11 @@
       {
         "src": "mycontroller/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.8" }
+        "config": { 
+            "maxLambdaSize": "15mb", 
+            "runtime": "python3.8",
+            "distDir": "static_root"
+        }
       }
     ],
     "routes": [
